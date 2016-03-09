@@ -3,53 +3,47 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+$mobile: new-breakpoint(max-width 600px 4);
+
 body {
-  background: #ECC561;
-  text-align: center;
+  background: #000;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+header {
+  position: relative;
 }
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
+.wrapper {
+  @include outer-container;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+.navigation {
+  @include span-columns(4);
+  background: green;
+}
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
+.content {
+  @include span-columns(8);
+  background: red;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 17%;
+  -webkit-animation-name: logo;
+  -webkit-animation-duration: .9s;
+  img {
+    max-width: 100%;
+  }
+
+  @include media($mobile) {
+    width: 35%;
   }
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
+@-webkit-keyframes logo {
   from {
     -webkit-transform: scale(0);
     opacity: 0;
@@ -65,5 +59,38 @@ h1 {
   }
   to {
     -webkit-transform: scale(1);
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+.social {
+  font-size: 1.5em;
+  padding: 0;
+
+  a {
+    color: #666;
+    padding: 0 0.5em;
+    &:hover {
+      color: darken(#00CFEA, 15%);
+    }
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;  
+  }
+}
+
+.video-wrapper {
+  margin: 0 auto;
+  width: 75%;
+  height: 600px;
+
+  @include media($mobile) {
+    width: 90%;
+    height: 400px;
   }
 }
