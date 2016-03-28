@@ -1,17 +1,60 @@
 ---
 title: Warn The Duke
 ---
-
-<div class="wrapper">
-		<header>
-			<h1 class="logo" title="Warn the Duke">
-				<%= image_tag "wtd-logo.jpg" %>
-			</h1>
-		</header>
-
-		<div class="video-wrapper">
-			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/h6K3JXk3v7g?showinfo=0" frameborder="0" allowfullscreen></iframe>
+<header>
+	<div class="wrapper">
+		<div class="desktop-nav">
+			<ul class="nav-items">
+				<li>
+					<a href="bio.html">Bio</a>
+				</li>
+				<li>
+					<a href="press.html">Press</a>
+				</li>
+				<li class="logo">
+					<h1 title="Warn the Duke">
+						<a href="index.html">
+							<%= image_tag "wtd-logo.jpg" %>
+						</a>
+					</h1>
+				</li>
+				<li>
+					<a href="shows.html">Shows</a></li>
+				<li>
+					<a href="videos.html">Videos</a>
+				</li>
+			</ul>
 		</div>
+		<div class="mobile-nav">
+			<h1 class="logo" title="Warn the Duke">
+				<img src="images/wtd-logo.jpg">
+			</h1>
+			<div class="mobile-nav-launch">Menu</div>
+			<ul class="nav-items">
+				<li>
+				<a href="bio.html">Bio</a>
+				</li>
+				<li>
+					<a href="press.html">Press</a>
+				</li>
+				<li>
+					<a href="shows.html">Shows</a></li>
+				<li>
+					<a href="videos.html">Videos</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</header>
+<div class="wrapper">
+		<div class="image-wrapper">
+			<%= image_tag "postcard.jpg" %>
+		</div>
+
+<!-- 		<div class="video-wrapper">
+			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/h6K3JXk3v7g?showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div> -->
 
 		<footer>
 			<ul class="social">
@@ -35,7 +78,12 @@ title: Warn The Duke
 						<i class="fa fa-spotify"></i>
 					</a>
 				</li>
+				<li>
+					<a href="https://www.instagram.com/warntheduke/">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</li>
 			</ul>
 		</footer>
-	
+
 </div><!-- wrapper -->
