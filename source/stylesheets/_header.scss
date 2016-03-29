@@ -1,0 +1,64 @@
+header {
+  background-color: #000;
+  position: relative;
+  border-bottom: 2px solid #000;
+  margin-bottom: 2em;
+}
+
+.nav-items {
+  font-weight: 700;
+  letter-spacing: 1px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  a {
+    color: #ddd;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: #fff;
+    }
+  }
+  li {
+    @include padding(0 2em);
+    display: inline-block;
+
+    &:not(.logo){
+      margin-top: 7em;
+      vertical-align: top;
+      @include media($mobile) {
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.desktop-nav {
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  @include media($mobile) {
+    display: block;
+  }
+  display: none;
+  .logo {
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  width: 20%;
+  img {
+    width: 100%;
+  }
+
+  @include media($mobile) {
+    width: 35%;
+  }
+}

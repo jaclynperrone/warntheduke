@@ -1,0 +1,48 @@
+$mobile: new-breakpoint(max-width 600px 4);
+
+body {
+  background-color: #000;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #fff;
+
+  &:not(.index) {
+    background: #000 url('../images/site-bg.jpg') no-repeat center top;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+.wrapper {
+  @include outer-container;
+}
+
+.content {
+  @include span-columns(8);
+  background: red;
+}
+
+.image-wrapper {
+  margin: 0 auto;
+  width: 75%;
+  img {
+    width: 100%;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}
+
+.video-wrapper {
+  margin: 0 auto;
+  width: 75%;
+  height: 600px;
+
+  @include media($mobile) {
+    width: 90%;
+    height: 400px;
+  }
+}
