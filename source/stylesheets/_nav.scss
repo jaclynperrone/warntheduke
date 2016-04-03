@@ -1,0 +1,27 @@
+.bio .bio-link,
+.press .press-link,
+.shows .shows-link,
+.videos .videos-link,
+.listen .listen-link {
+	
+	a {
+		@include nav-active;
+	}
+}
+
+.nav-items {
+	@include navigation;
+
+	li.logo {
+	  @include position(absolute, 0 0 0 0);
+	  margin: 0;
+	  width: 100px;
+
+	  img {
+	    width: 100%;
+	  }
+	  a {
+	    padding: 0;
+	  }
+	}	
+}

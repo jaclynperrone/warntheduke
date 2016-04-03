@@ -1,10 +1,18 @@
-$mobile: new-breakpoint(max-width 600px 4);
+
 
 body {
   background-color: #000;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #eee;
+  color: $base-font-color;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1 {
@@ -15,20 +23,16 @@ h1 {
   @include outer-container;
 }
 
-.content {
-  @include span-columns(8);
-  background: red;
-}
-
 .image-wrapper {
   @include padding(1em 0 3em);
   @include margin(0 auto);
   width: 75%;
+
   img {
     width: 100%;
   }
 
-  @include media($mobile) {
+  @include media($mobile-screen-down) {
     width: 100%;
   }
 }
@@ -38,7 +42,7 @@ h1 {
   width: 75%;
   height: 600px;
 
-  @include media($mobile) {
+  @include media($mobile-screen-down) {
     width: 90%;
     height: 400px;
   }

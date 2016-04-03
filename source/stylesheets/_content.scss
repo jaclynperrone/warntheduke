@@ -1,12 +1,17 @@
-.copy {
+.content {
+	@include margin(0 auto);
   @include padding(1em 0);
-  @include shift(2);
-  @include span-columns(8);
   font-size: 1.125em;
   font-weight: 300;
   line-height: 1.5em;
+  width: 65%;
+  min-height: 30em;
 
   p {
   	margin-bottom: 1.5em;
+  }
+
+	@include media($mobile-screen-down) {
+		width: 90%;
   }
 }

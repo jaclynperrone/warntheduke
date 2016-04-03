@@ -1,0 +1,57 @@
+//Colors
+$off-white: #d4cdcd;
+$wtd-red: #a21c28;
+$light-red: #82686a;
+$light-gray: #b7b7b7;
+$dark-gray: #111;
+
+//Typography
+$base-font-color: $off-white;
+$action-color: $wtd-red;
+
+//Breakpoints
+$mobile-screen-down: new-breakpoint(max-width 600px 4);
+
+
+//Mixins
+@mixin plain-ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin navigation {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+	li {
+		@include margin(1.5em);
+		display: inline-block;
+		font-weight: 700;
+  	letter-spacing: 1px;
+  	text-transform: uppercase;
+
+  	@include media($mobile-screen-down) {
+      display: block;
+    }
+	}
+
+	a {
+		@include padding(0.5em);
+		border: 1px solid transparent;
+		color: $light-gray;
+		text-decoration: none;
+
+		&:hover {
+      color: #fff;
+		}
+	}
+}
+
+@mixin nav-active {
+	border: 1px solid $light-red;
+	border-radius: 1px;
+	color: #fff;
+}
