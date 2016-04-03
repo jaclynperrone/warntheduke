@@ -1,6 +1,12 @@
 .copy {
-  @include span-columns(8);
+  @include padding(1em 0);
   @include shift(2);
-  line-height: 2em;
+  @include span-columns(8);
   font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.5em;
+
+  p {
+  	margin-bottom: 1.5em;
+  }
 }

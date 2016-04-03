@@ -4,11 +4,7 @@ body {
   background-color: #000;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #fff;
-
-  &:not(.index) {
-    background: #000 url('../images/site-bg.jpg') no-repeat center top;
-  }
+  color: #eee;
 }
 
 h1 {
@@ -25,7 +21,8 @@ h1 {
 }
 
 .image-wrapper {
-  margin: 0 auto;
+  @include padding(1em 0 3em);
+  @include margin(0 auto);
   width: 75%;
   img {
     width: 100%;

@@ -1,5 +1,6 @@
 footer {
-  @include margin(3em 0);
+  @include padding(2em 0 3em);
+  background: url("../images/site-bg.jpg") no-repeat 75% 80%;
   text-align: center;
 }
 
@@ -8,10 +9,10 @@ footer {
   padding: 0;
 
   a {
-    color: #666;
+    color: #ddd;
     padding: 0 0.5em;
     &:hover {
-      color: darken(#00CFEA, 15%);
+      color: #fff;
     }
   }
 
