@@ -36,14 +36,3 @@ h1 {
     width: 100%;
   }
 }
-
-.video-wrapper {
-  margin: 0 auto;
-  width: 75%;
-  height: 600px;
-
-  @include media($mobile-screen-down) {
-    width: 90%;
-    height: 400px;
-  }
-}

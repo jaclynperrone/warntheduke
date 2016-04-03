@@ -5,9 +5,10 @@
 		@include span-columns(4);
 		@include omega(3n);
 		margin-bottom: 1em;
-	}
 
- 	@include media($mobile-screen-down) {
-    @include span-columns(12);
-  }
+		@include media($mobile-screen-down) {
+	    width: 100%;
+	   	float: none;
+  	}
+	}
 }
