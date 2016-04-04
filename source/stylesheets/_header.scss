@@ -9,6 +9,6 @@ header {
   }
 
   @include media($mobile-screen-down) {
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 }
