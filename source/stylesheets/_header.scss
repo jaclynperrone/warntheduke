@@ -5,6 +5,10 @@ header {
   margin-bottom: 2em;
 
   @include media($mobile-screen-down) {
+    background-position: 60% 61%;
+  }
+
+  @include media($mobile-screen-down) {
     margin-bottom: 1em;
   }
 }

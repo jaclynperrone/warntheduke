@@ -3,6 +3,10 @@ footer {
   @include margin(3em 0 0 0);
   background: url("../images/site-bg.jpg") no-repeat 75% 80%;
   text-align: center;
+
+  @include media($mobile-screen-down) {
+    background-position: 63% 80%;
+  }
 }
 
 .social {
