@@ -10,4 +10,10 @@
 
 .nav-items {
 	@include navigation;
+
+  li {
+    @include media($mobile-screen-down) {
+      display: block;
+    }
+  }
 }
