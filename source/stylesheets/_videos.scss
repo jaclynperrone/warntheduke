@@ -2,9 +2,9 @@
 	@include plain-ul;
 
 	li {
-		@include span-columns(4);
-		@include omega(3n);
-		margin-bottom: 1em;
+		@include span-columns(6);
+		@include omega(2n);
+		height: 300px;
 
 		@include media($mobile-screen-down) {
 	    width: 100%;
