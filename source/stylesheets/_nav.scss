@@ -2,7 +2,8 @@
 .press .press-link,
 .shows .shows-link,
 .videos .videos-link,
-.listen .listen-link {
+.listen .listen-link,
+.shows .shows-link {
 	a {
 		@include nav-active;
 	}
